@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Accueil - Lionel Adandokpossi
+{% endblock %}
+
+
+
+{% block content %}
+    <section class="home-hero">
+        <div class="hero-text">
+            <p>Salut , je suis</p>
+
+            <h1>Lionel <strong>Adandokpossi</strong></h1>
+            <h1>Developpeur Python Junior et Weaving Designer</h1>
+
+            <p>
+                Je conçois et développe des solutions webs robustes et innoventes, pour la résolution
+                de problemes produits complexes tout en mettant l'accent sur l'originalité du rendu visuel
+                et l'experience utilisateur. <br>
+                Motivé, curieux et prêt à relever de nouveaux défis. N’hésitez pas à me contacter pour échanger
+                ou travailler ensemble.
+            </p>
+
+            <p>
+                <a href="https://linkedin.com/in/alionel76/" target="_blank"><img src="{% static 'images/favicon-linkedin.svg' %}" alt="Linkedin Lionel Adandokpossi"></a> &nbsp; | &nbsp;
+                <a href="https://github.com/alionel76" target="_blank"><img src="{% static 'images/favicon-github.svg' %}" alt="Github Lionel Adandokpossi"></a> &nbsp; | &nbsp;
+                <a href="https://facebook.com/alionel76/" target="_blank"><img src="{% static 'images/favicon-facebook.svg' %}" alt="Facebook Lionel Adandokpossi"></a>
+
+            </p>
+        </div>
+
+        <div class="hero-image">
+            <img src="{% static 'images/photo_lionel_adandokpossi.jpg' %}" alt="Photo Lionel Adandokpossi">
+        </div>
+    </section>
+
+{% endblock %}

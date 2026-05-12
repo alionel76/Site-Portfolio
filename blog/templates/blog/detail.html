@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Blog - Lionel Adandokpossi
+{% endblock %}
+
+
+
+{% block content %}
+    <h1>Bienvenue sur mon blog</h1>
+
+    <section>
+        <h3>Article : <strong>{{ actual_post.title }}</strong></h3>
+
+        <h3>Contenu</h3>
+        <p>{{ actual_post.content }}</p>
+        <p>
+            Publié par : <strong>{{ actual_post.author.get_full_name }}</strong>
+            le <strong>{{ actual_post.date_created|date:"d F Y"|title }}</strong>
+        </p>
+        <p>
+            Dernière modification : <strong>{{ actual_post.date_last_modified|date:"d F Y"|title }}</strong>
+        </p>
+    </section>
+
+{% endblock %}

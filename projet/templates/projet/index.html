@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Blog - Lionel Adandokpossi
+{% endblock %}
+
+
+
+{% block content %}
+    <h1>Mes projets</h1>
+
+    <section>
+        <div class="blog-header">
+            <h3>Les projets disponibles </h3>
+            {% if user.is_authenticated %}
+            	<a href="{% url 'projet-create' %}" class="btn-create-post"><span class="btn-text">+</span></a>
+            {% endif %}
+        </div>
+
+        {% for projet in projets %}
+            {% if projet.published %}
+            	<div class="blog-post">
+                    <p><strong>Titre :</strong> {{ projet.title }}</p>
+                    <p><strong>Contenu :</strong> {{ projet.content|truncatechars:15 }}</p>
+                    <p><strong>Publié le : </strong> {{ projet.date_created|date:"d F Y"|title }}</p>
+                    <p>
+                        <a href="{% url 'projet-detail' projet.slug %}">Voir le projet</a>
+                        {% if user.is_authenticated %}
+                            &nbsp; | &nbsp;
+                            <a href="{% url 'projet-update' projet.slug %}">Modifier le projet</a> &nbsp; | &nbsp;
+                            <a href="{% url 'projet-delete' projet.slug %}">Supprimer le projet</a>
+                        {% endif %}
+                    </p>
+                </div>
+            {% endif %}
+
+        {% endfor %}
+    </section>
+
+
+{% endblock %}

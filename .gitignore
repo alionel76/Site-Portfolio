@@ -1,0 +1,7 @@
+# Ignorer la venv et les dossiers temporaires
+.venv/
+.idea/
+__pycache__/
+
+# Ignorer la base de données
+db.sqlite3

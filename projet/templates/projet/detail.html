@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Blog - Lionel Adandokpossi
+{% endblock %}
+
+
+
+{% block content %}
+    <h1>Mes projets</h1>
+
+    <section>
+        <h3>Projet : <strong>{{ actual_projet.title }}</strong></h3>
+
+        <h3>Contenu : </h3>
+        <p>{{ actual_projet.content }}</p>
+        <p>
+            Publié par : <strong>{{ actual_projet.author.get_full_name }}</strong>
+            le <strong>{{ actual_projet.date_created|date:"d F Y"|title }}</strong>
+        </p>
+        <p>
+            Dernière modification : <strong>{{ actual_projet.date_last_modified|date:"d F Y"|title }}</strong>
+        </p>
+
+        {% if actual_projet.link %}
+            <p>
+                <a href="{{ actual_projet.link }}" target="_blank">Voir le projet complet </a>
+            </p>
+        {% endif %}
+    </section>
+
+{% endblock %}

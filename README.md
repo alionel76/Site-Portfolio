@@ -2,11 +2,11 @@
 
 
 
-## Description 
+## 📌 Description 
 Petit projet de portfolio réalisé avec le Framework Django
 
 
-## Installation 
+## 📌 Installation 
 
 ### 1. Télécharger et installer Python
 Visiter le site officiel : [https://www.python.org/downloads/](https://www.python.org/downloads/)
@@ -41,7 +41,7 @@ Visiter le site officiel : [https://www.python.org/downloads/](https://www.pytho
     python manage.py createsuperuser
 ```
 
-## Utilisation
+## 📌 Utilisation
 ```bash
     # Lancer le serveur
     python manage.py runserver
